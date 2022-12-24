@@ -83,36 +83,34 @@
 
 /***************************************START OF SEATS ARRANGEMENT*****************************************/
 .seats_chairs{
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 .seat_content{
     width: 70%;
-    margin-left: 18%;
+    margin-left: 20%;
     overflow-x: scroll;
 }
 .seat_content::-webkit-scrollbar{
     display: none;
 }
 .row{
-    padding:2px;
-}
+    display: flex;
+  }
 .seat1,.seat2,.seat3{
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border:1px solid rgb(85, 230, 85);
     background-color: white;
     font-size: .8rem;
     border-radius: 2px;
     color:rgb(14, 141, 14) ;
-    padding:.3rem;
-    margin:5px;
-    text-align: center;
+    margin:3px;
 }
 
-.seat.booked {
-    background-color: red;
-  }
-
-
-  .selected {
+ .selected {
     background-color: green;
     color: white;
   }
@@ -122,16 +120,16 @@
     color: white;
   }
 
+  
   /************************************************SCREEN******************************************* */
-  .screen {
-    position: absolute;
-    bottom: 7%;
-    left: 50%;
-    /* bottom: 0; */
-    /* left: 50%; */
-    transform: translate(-50%, 0);
-    /* transform: rotate(30deg); */
-    width: 15rem;
+  .screen_container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .seat_screen {
+    width: 15%;
     height: 3rem;
     color: black;
     font-size: .8rem;
@@ -204,4 +202,35 @@
     width: 16px;
     height: 16px;
     margin-left: 32px;
+}
+
+/*******************************************TOTAL PAYMENT BUTTON***************************************/
+.seat_type1 {
+    width: 100%;
+    padding: .5rem;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(92, 91, 91, 0.3);
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+    display: none;
+}
+.seat_payment_shw_btn{
+    width: 27%;
+    padding: .8rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #f84464;
+}
+.seat_payment_shw_btn a{
+    color: white;
+    font-size: 1rem;
+}
+
+.display_flex{
+    display: flex;
 }
